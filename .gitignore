@@ -18,6 +18,7 @@ ExportedObj/
 *.booproj
 *.svd
 *.DS_Store
+*.consulo
 
 
 # Unity3D generated meta files
@@ -29,3 +30,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+.consulo/.name
