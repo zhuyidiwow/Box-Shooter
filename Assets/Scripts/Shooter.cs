@@ -6,6 +6,7 @@ public class Shooter : MonoBehaviour {
 	// Reference to projectile prefab to shoot
 	public GameObject projectile;
 	public float power = 10.0f;
+    public Transform shootPosition;
 	
 	// Reference to AudioClip to play
 	public AudioClip shootSFX;
@@ -19,7 +20,7 @@ public class Shooter : MonoBehaviour {
 			if (projectile)
 			{
 				// Instantiante projectile at the camera + 1 meter forward with camera rotation
-				GameObject newProjectile = Instantiate(projectile, transform.position + transform.forward, transform.rotation) as GameObject;
+				GameObject newProjectile = Instantiate(projectile, shootPosition.position, transform.rotation) as GameObject;
 
 				// if the projectile does not have a rigidbody component, add one
 				if (!newProjectile.GetComponent<Rigidbody>()) 
